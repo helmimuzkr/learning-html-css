@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>test</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+      .row {
+        margin-left: 100px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* grid-auto-flow: column; */
+      }
+      h2 {
+        margin-top: 30px;
+      }
+      h3 {
+        padding-right: 200px;
+      }
+      .mt {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <!-- Test Position relative -->
+      <div class="col">
+        <h2 class="mt">Position Relatif</h2>
+        <div class="wrapper-1">
+          <div class="red"></div>
+          <div class="green"></div>
+          <div class="blue"></div>
+        </div>
+        <h3>Objek green berada 1 dimensi diatas objek static.</h3>
+        <h3>
+          Ketika objek diberikan nilai relative, ruang yang ditempati oleh objek
+          tesebut masih ada.
+        </h3>
+        <h3>
+          Dan, ketika objek gerak maka akan relatif terhadap posisi awalnya.
+        </h3>
+      </div>
+
+      <!-- Test Position absolute -->
+      <div class="col">
+        <h2 class="mt">Position Absolute</h2>
+        <div class="wrapper-2">
+          <div class="merah"></div>
+          <div class="hijau"></div>
+          <div class="biru"></div>
+          <div class="kuning"></div>
+        </div>
+        <h3>
+          Memberikan nilai relative agar pembungkus naik 1 dimensi jadi berada
+          di dimensi yang sama dengan objek biru. Objek biru jadi dapat
+          digerakan tanpa keluar dari pembungkus.
+        </h3>
+        <h3>
+          Jika diberikan nilai 0 pada property top dan right dan nilai
+          relativenya dihapus maka objek akan keluar dari pembungkusnya. Objek
+          biru mengikuti parent bernilai nilai nonstatic.
+        </h3>
+        <h3>
+          Objek hijau juga seperti di sebelah, namun disini ruang yang ditempati
+          atau posisi awal objek tesebut dianggap tidak ada.
+        </h3>
+      </div>
+    </div>
+
+    <h2 class="mt">
+      Reference from
+      <a href="https://www.youtube.com/watch?v=ENooU6dnzoQ"
+        >WEB PROGRAMMING UNPAS</a
+      >
+    </h2>
+
+    <script src="script.js"></script>
+  </body>
+</html>

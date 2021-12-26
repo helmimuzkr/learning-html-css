@@ -1,0 +1,49 @@
+/* Membuat elemen pembungkus objek */
+.wrapper-1 {
+  width: 350px;
+  height: 350px;
+  border: 10px solid black;
+
+  &:hover {
+    .green {
+      animation-name: green;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes green {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 100px;
+      }
+    }
+  }
+
+  /* Membuat Objek */
+  .red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  .green {
+    /* Objek green berada 1 dimensi diatas objek static. */
+    /* Ketika objek diberikan nilai relative, ruang yang ditempati oleh objek tesebut masih ada*/
+    /* Ketika objek digerakan, maka akan relatif terhadap posisi awalnya. */
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+
+  .blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+}

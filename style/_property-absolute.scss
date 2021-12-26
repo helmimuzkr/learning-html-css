@@ -1,0 +1,69 @@
+/* Objek biru dan border pembungkus berada di 1 dimensi yang sama */
+
+/* Membuat elemen pembungkus objek */
+.wrapper-2 {
+  /* Memberikan nilai relative agar pembungkus naik 1 dimensi, jadi berada di dimensi yang sama dengan objek biru */
+  /* Objek biru jadi dapat digerakan tanpa keluar dari pembungkus*/
+  /* Jika relativenya dihapus, maka objek akan keluar dari pembungkusnya mengikuti parent objek yang diberikan nilai absolute */
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border: 10px solid black;
+
+  &:hover {
+    .hijau {
+      animation-name: hijau;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes hijau {
+      0% {
+        position: absolute;
+        left: 0;
+      }
+      100% {
+        position: absolute;
+        left: 100px;
+      }
+    }
+  }
+
+  /* Membuat Objek */
+  .merah {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+
+  .biru {
+    /* Ketika objek diberikan nilai absolute, ruang yang ditempati oleh objek tesebut dianggap tidak ada*/
+    /* Ketika objek digerakan, maka akan relatif terhadap posisi dari elemen parentnya yaitu WINDOW. */
+    /* Objek jadi dapat menggunakan property top, right, bottom, dan left */
+    /* Ketika nilai absolutenya dihapus, maka objek akan menjadi static */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+
+  .hijau {
+    /* Ketika objek diberikan nilai absolute, ruang yang ditempati oleh objek tesebut dianggap tidak ada*/
+    /* Ketika objek digerakan, maka akan relatif terhadap posisi dari elemen parentnya yaitu WINDOW. */
+
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+
+  .kuning {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+  }
+}
