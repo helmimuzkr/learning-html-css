@@ -1,9 +1,9 @@
-/* Objek biru dan border pembungkus berada di 1 dimensi yang sama */
+/* Objek kuning dan border pembungkus berada di 1 dimensi yang sama */
 
 /* Membuat elemen pembungkus objek */
 .wrapper-2 {
-  /* Memberikan nilai relative agar pembungkus naik 1 dimensi, jadi berada di dimensi yang sama dengan objek biru */
-  /* Objek biru jadi dapat digerakan tanpa keluar dari pembungkus*/
+  /* Memberikan nilai relative agar pembungkus naik 1 dimensi, jadi berada di dimensi yang sama dengan objek kuning */
+  /* Objek kuning jadi dapat digerakan tanpa keluar dari pembungkus*/
   /* Jika relativenya dihapus, maka objek akan keluar dari pembungkusnya mengikuti parent objek yang diberikan nilai absolute */
   position: relative;
   width: 350px;
@@ -39,7 +39,7 @@
     background-color: red;
   }
 
-  .biru {
+  .kuning {
     /* Ketika objek diberikan nilai absolute, ruang yang ditempati oleh objek tesebut dianggap tidak ada*/
     /* Ketika objek digerakan, maka akan relatif terhadap posisi dari elemen parentnya yaitu WINDOW. */
     /* Objek jadi dapat menggunakan property top, right, bottom, dan left */
@@ -49,7 +49,7 @@
     right: 0;
     width: 100px;
     height: 100px;
-    background-color: blue;
+    background-color: yellow;
   }
 
   .hijau {
@@ -61,9 +61,9 @@
     background-color: green;
   }
 
-  .kuning {
+  .biru {
     width: 100px;
     height: 100px;
-    background-color: yellow;
+    background-color: blue;
   }
 }
